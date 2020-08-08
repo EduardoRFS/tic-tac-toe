@@ -4,6 +4,7 @@
   "dependencies": {
     "@esy-ocaml/reason": "^3.6.0",
     "@opam/dune": "^2.6.2",
+    "@opam/ppx_deriving": "4.5",
     "@reason-native/console": "^0.1.0",
     "ocaml": "^4.10.0"
   },
