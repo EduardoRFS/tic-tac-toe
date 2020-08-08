@@ -1,5 +1,5 @@
 {
-  "checksum": "a2d1d81900088decb0bb887b4393bebc",
+  "checksum": "7b0266e501e33b5acadede922c9597cb",
   "root": "tic-tac-toe@link-dev:./package.json",
   "node": {
     "tic-tac-toe@link-dev:./package.json": {
@@ -14,6 +14,7 @@
       "overrides": [],
       "dependencies": [
         "ocaml@4.10.0@d41d8cd9", "@reason-native/console@0.1.0@d41d8cd9",
+        "@opam/ppx_deriving_yojson@opam:3.5.3@253e094d",
         "@opam/ppx_deriving@opam:4.5@bb81afdc",
         "@opam/dune@opam:2.6.2@20433b4f", "@esy-ocaml/reason@3.6.0@d41d8cd9"
       ],
@@ -207,6 +208,39 @@
       ],
       "devDependencies": [
         "ocaml@4.10.0@d41d8cd9", "@opam/dune@opam:2.6.2@20433b4f"
+      ]
+    },
+    "@opam/ppx_deriving_yojson@opam:3.5.3@253e094d": {
+      "id": "@opam/ppx_deriving_yojson@opam:3.5.3@253e094d",
+      "name": "@opam/ppx_deriving_yojson",
+      "version": "opam:3.5.3",
+      "source": {
+        "type": "install",
+        "source": [
+          "archive:https://opam.ocaml.org/cache/md5/e5/e5185e4ac9d149a332566139df55d408#md5:e5185e4ac9d149a332566139df55d408",
+          "archive:https://github.com/ocaml-ppx/ppx_deriving_yojson/archive/v3.5.3.tar.gz#md5:e5185e4ac9d149a332566139df55d408"
+        ],
+        "opam": {
+          "name": "ppx_deriving_yojson",
+          "version": "3.5.3",
+          "path": "esy.lock/opam/ppx_deriving_yojson.3.5.3"
+        }
+      },
+      "overrides": [],
+      "dependencies": [
+        "ocaml@4.10.0@d41d8cd9", "@opam/yojson@opam:1.7.0@7056d985",
+        "@opam/result@opam:1.5@6b753c82", "@opam/ppxfind@opam:1.4@1e01d2a5",
+        "@opam/ppx_tools@opam:6.2@62a3aff2",
+        "@opam/ppx_deriving@opam:4.5@bb81afdc",
+        "@opam/dune@opam:2.6.2@20433b4f", "@opam/cppo@opam:1.6.6@f4f83858",
+        "@esy-ocaml/substs@0.0.1@d41d8cd9"
+      ],
+      "devDependencies": [
+        "ocaml@4.10.0@d41d8cd9", "@opam/yojson@opam:1.7.0@7056d985",
+        "@opam/result@opam:1.5@6b753c82",
+        "@opam/ppx_tools@opam:6.2@62a3aff2",
+        "@opam/ppx_deriving@opam:4.5@bb81afdc",
+        "@opam/dune@opam:2.6.2@20433b4f"
       ]
     },
     "@opam/ppx_deriving@opam:4.5@bb81afdc": {

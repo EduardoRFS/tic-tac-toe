@@ -1,4 +1,6 @@
 (executable
  (name TicTacToe)
  (public_name tic-tac-toe)
- (libraries console.lib))
+ (libraries console.lib)
+ (preprocess
+  (pps ppx_deriving.show ppx_deriving_yojson)))
