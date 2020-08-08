@@ -1,0 +1,4 @@
+(executable
+ (name TicTacToe)
+ (public_name tic-tac-toe)
+ (libraries console.lib))
