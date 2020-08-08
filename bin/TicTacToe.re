@@ -1,37 +1,34 @@
-module State = {
-  type error =
-    | Position_already_selected;
+type error =
+  | Position_already_selected;
 
-  type player =
-    | Player_1
-    | Player_2;
+type player =
+  | Player_1
+  | Player_2;
 
-  module Board = {
-    type t = array(option(player));
-    let get_index = ((x, y)) => y * 3 + x;
-    let get = (position, t) => t[get_index(position)];
-    let set = (position, player, t) =>
-      Array.copy(t)[get_index(position)] = Some(player);
+type position = (int, int);
 
-    /* fail if already was placed */
-    let place = (position, player, t) =>
-      switch (get(position, t)) {
-      | Some(_) => Error(Position_already_selected)
-      | None => Ok(set(position, player, t))
-      };
-  };
+module Board = {
+  type t = array(option(player));
+  let get_index = ((x, y)) => y * 3 + x;
+  let get = (position, t) => t[get_index(position)];
+  let set = (position, player, t) =>
+    Array.copy(t)[get_index(position)] = Some(player);
 
-  type turn =
-    | Player(player)
-    | Done;
-
-  type t = (Board.t, turn);
+  /* fail if already was placed */
+  let place = (position, player, t) =>
+    switch (get(position, t)) {
+    | Some(_) => Error(Position_already_selected)
+    | None => Ok(set(position, player, t))
+    };
 };
 
-module Action = {
-  type position = (int, int);
-  type t =
-    | Select(position);
-};
+type turn =
+  | Player(player)
+  | Done;
+
+type state = (Board.t, turn);
+
+type action =
+  | Select(position);
 
 Console.log("tuturu");
