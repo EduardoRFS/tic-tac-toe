@@ -32,3 +32,4 @@ let place = (position, player, t) => {
   | None => set(position, player, t)
   };
 };
+let is_full = t => !Array.exists(Option.is_none, t);
